@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+void display(struct Book);
 struct Book
 {
     string title;
@@ -8,23 +9,23 @@ struct Book
     string subject;
     short id;
 };
-void display(Book);
-
-void display(Book obj)
-{
-    cout<<obj.title<<endl;
-    cout<<obj.author<<endl;
-    cout<<obj.subject<<endl;
-    cout<<obj.id<<endl;
-}
 
 int main()
 {
-    Book obj;
+    struct Book obj;
     obj.title="Let Us C++";
     obj.author="Yashvant Kanetkar";
     obj.subject="C++ programming";
     obj.id=32;
     display(obj);
     return 0;
+}
+
+
+void display(struct Book obj)
+{
+    cout<<obj.title<<endl;
+    cout<<obj.author<<endl;
+    cout<<obj.subject<<endl;
+    cout<<obj.id<<endl;
 }
