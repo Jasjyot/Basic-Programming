@@ -1,7 +1,3 @@
-//inconsistent with n<=2
-
-
-
 #include <iostream>
 using namespace std;
 void waveSort(int n, int brr[]);
@@ -11,6 +7,7 @@ void waveSort(int n, int brr[])
     {
         //98 -1 0 215 36
         int j;
+        
         if(!(brr[0]>=brr[1]))
         {
             int t=brr[0];
@@ -39,7 +36,7 @@ void waveSort(int n, int brr[])
                 brr[i]=t;
             }
         }
-        if(n%2==0)
+        if((n-1)%2==0)
         {
             if(!(brr[n-1]>=brr[n-2]))
             {
