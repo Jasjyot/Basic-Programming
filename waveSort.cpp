@@ -3,7 +3,7 @@ using namespace std;
 void waveSort(int n, int brr[]);
 void waveSort(int n, int brr[])
 {
-    if(n)
+    if(n>1)
     {
         //98 -1 0 215 36
         int j;
