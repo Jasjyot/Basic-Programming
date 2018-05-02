@@ -9,19 +9,26 @@ string search(int arr[][4],int R,int C, int element)
     int i=0,j=C-1;
     string str;
     
-    while(element != arr[i][j])
+    while((i<R) && (j<C) && (j>=0)&&(i>=0))
     {
-        if(element<arr[i][j])
+        if((element == arr[i][j]))
         {
-            j--;
+            str="Element found at i= "+to_string(i)+", j= "+to_string(j);  
+            return str;
         }
         else
         {
-            i++;    
+            if(element<arr[i][j])
+            {
+                j--;
+            }
+            else
+            {
+                i++;    
+            }
         }
     }
-    
-    str="Element found at i= "+to_string(i)+", j= "+to_string(j);
+    str="Element not found";
     return str;
 }
 
@@ -35,9 +42,8 @@ int main() {
       {12,14,15,18},
       {16,17,20,22}
     };
-    //
    
-    cout<<search(arr,4,4,17); 
+    cout<<search(arr,4,4,0); 
     
     return 0;
 }
