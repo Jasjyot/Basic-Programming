@@ -9,7 +9,7 @@ string search(int arr[][4],int R,int C, int element)
     int i=0,j=C-1;
     string str;
     
-    while((i<R) && (j<C) && (j>=0)&&(i>=0))
+    while((i<R) && (j>=0))
     {
         if((element == arr[i][j]))
         {
