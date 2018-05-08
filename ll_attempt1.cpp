@@ -43,7 +43,7 @@ int main()
         ptr=ptr->next;
     }
 
-    //delete node from L.L via searching    
+    //delete node from L.L via searching exept the head node   
     int key=6;
     ptr=head;
     while(ptr->next!=NULL)
